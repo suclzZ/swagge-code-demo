@@ -1,0 +1,342 @@
+
+[[_paths]]
+== Paths
+
+[[_saveuserusingpost]]
+=== 新增用户
+....
+POST /user
+....
+
+
+==== Description
+新增用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*user* +
+_required_|用户|<<_user,User>>|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*201*|Created|No Content
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_getusersusingget]]
+=== 获取所有用户
+....
+GET /user
+....
+
+
+==== Description
+获取所有用户
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_getusingget]]
+=== 用户信息
+....
+GET /user/get
+....
+
+
+==== Description
+获取用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Query*|*id* +
+_required_|用户id|ref|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_user,User>>
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_saveusingpost]]
+=== 添加用户信息
+....
+POST /user/save
+....
+
+
+==== Description
+新增用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Query*|*age* +
+_optional_|年龄|integer(int32)|
+|*Query*|*ctm* +
+_optional_|创建时间|string(date-time)|
+|*Query*|*id* +
+_optional_|主键|integer(int32)|
+|*Query*|*name* +
+_optional_|姓名|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*201*|Created|No Content
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_getuserbyidusingget]]
+=== 获取用户信息
+....
+GET /user/{id}
+....
+
+
+==== Description
+根据id查询用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*id* +
+_required_|用户id|ref|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_updateuserbyidusingput]]
+=== 修改用户
+....
+PUT /user/{id}
+....
+
+
+==== Description
+根据id修改用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*id* +
+_required_|用户id|ref|
+|*Body*|*user* +
+_required_|用户|<<_user,User>>|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*201*|Created|No Content
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|*404*|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+[[_deleteuserusingdelete]]
+=== 删除用户信息
+....
+DELETE /user/{id}
+....
+
+
+==== Description
+根据id删除用户
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*id* +
+_required_|用户id|ref|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_jsonresult,JsonResult>>
+|*204*|No Content|No Content
+|*401*|Unauthorized|No Content
+|*403*|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* UserController
+
+
+

@@ -1,0 +1,30 @@
+= swagger api demo
+
+
+[[_overview]]
+== Overview
+demo
+
+
+=== Version information
+[%hardbreaks]
+_Version_ : 1.0.0
+
+
+=== License information
+[%hardbreaks]
+_Terms of service_ : www.baidu.com
+
+
+=== URI scheme
+[%hardbreaks]
+_Host_ : localhost
+_BasePath_ : /
+
+
+=== Tags
+
+* UserController : User Controller
+
+
+

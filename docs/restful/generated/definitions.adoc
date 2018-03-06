@@ -1,0 +1,37 @@
+
+[[_definitions]]
+== Definitions
+
+[[_jsonresult]]
+=== JsonResult
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*result* +
+_optional_||object
+|*status* +
+_optional_||string
+|===
+
+
+[[_user]]
+=== User
+用户对象
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*age* +
+_optional_|年龄|integer(int32)
+|*ctm* +
+_optional_|创建时间|string(date-time)
+|*id* +
+_optional_|主键|integer(int32)
+|*name* +
+_optional_|姓名|string
+|===
+
+
+
